@@ -1,11 +1,13 @@
+// 1
 let a = 0
 
 function recurse() {
-  if (a === 5) return
+  if (a === 5) return "done"
 
   a++
-  recurse()
+  return recurse()
 }
 recurse()
 
-console.log(a)
+console.log(recurse())
+console.log("a = ", a)
